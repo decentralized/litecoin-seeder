@@ -405,8 +405,8 @@ extern "C" void* ThreadStats(void*) {
   return nullptr;
 }
 
-static const string mainnet_seeds[] = {"dnsseed.decentralizeduser.com", ""};
-static const string testnet_seeds[] = { ""};
+static const string mainnet_seeds[] = {"127.0.0.1", "dnsseed.decentralizeduser.com", "dnsseed.maxcoinproject.net", "dnsseed.maxcoinproject.com", "dnsseed.maxcoinproject.org", ""};
+static const string testnet_seeds[] = {"127.0.0.1", "dnsseed.testnet.decentralizeduser.com", "dnsseed.testnet.maxcoinproject.net", "dnsseed.testnet.maxcoinproject.com", "dnsseed.testnet.maxcoinproject.org", ""};
 static const string *seeds = mainnet_seeds;
 
 extern "C" void* ThreadSeeder(void*) {
