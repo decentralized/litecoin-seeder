@@ -12,11 +12,19 @@
 
 #define MIN_RETRY 1000
 
+<<<<<<< HEAD
 #define REQUIRE_VERSION 70005
 
 static inline int GetRequireHeight(const bool testnet = fTestNet)
 {
     return testnet ? 5000 : 4000000;
+=======
+#define REQUIRE_VERSION 70000
+
+static inline int GetRequireHeight(const bool testnet = fTestNet)
+{
+    return testnet ? 9000 : 4000000;
+>>>>>>> b1686c0dcef3a794ed82d84f7927542eb4949706
 }
 
 std::string static inline ToString(const CService &ip) {
@@ -119,7 +127,11 @@ public:
   }
   int GetBanTime() const {
     if (IsGood()) return 0;
+<<<<<<< HEAD
     if (clientVersion && clientVersion < 60000) { return 604800; }
+=======
+    if (clientVersion && clientVersion < 40000) { return 604800; }
+>>>>>>> b1686c0dcef3a794ed82d84f7927542eb4949706
     if (stat1M.reliability - stat1M.weight + 1.0 < 0.15 && stat1M.count > 32) { return 30*86400; }
     if (stat1W.reliability - stat1W.weight + 1.0 < 0.10 && stat1W.count > 16) { return 7*86400; }
     if (stat1D.reliability - stat1D.weight + 1.0 < 0.05 && stat1D.count > 8) { return 1*86400; }

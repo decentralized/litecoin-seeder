@@ -405,8 +405,13 @@ extern "C" void* ThreadStats(void*) {
   return nullptr;
 }
 
+<<<<<<< HEAD
 static const string mainnet_seeds[] = {"127.0.0.1", "dnsseed.decentralizeduser.com", "dnsseed.maxcoinproject.net", "dnsseed.maxcoinproject.com", "dnsseed.maxcoinproject.org", ""};
 static const string testnet_seeds[] = {"127.0.0.1", "dnsseed.testnet.decentralizeduser.com", "dnsseed.testnet.maxcoinproject.net", "dnsseed.testnet.maxcoinproject.com", "dnsseed.testnet.maxcoinproject.org", ""};
+=======
+static const string mainnet_seeds[] = {"127.0.0.1", "dnsseed.decentralizeduser.com", ""};
+static const string testnet_seeds[] = {"127.0.0.1", "dnsseed.testnet.decentralizeduser.com", ""};
+>>>>>>> b1686c0dcef3a794ed82d84f7927542eb4949706
 static const string *seeds = mainnet_seeds;
 
 extern "C" void* ThreadSeeder(void*) {
